@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Distribuciones MB — Del catálogo a la entrega</title>
+<meta name="description" content="Consulta productos, envía tu solicitud y sigue cada avance con un mismo folio.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Distribuciones MB, inicio"><img class="lg-i" src="img/logo-icono.png" width="35" height="30" alt=""><img class="lg-n" src="img/logo-nombre.png" width="157" height="22" alt="Distribuciones MB"></a>
+    <div class="links"><a href="#como">Cómo funciona</a><a href="catalogo.html">Catálogo</a><a href="#solicitud">Solicitud</a><a href="#seguimiento">Seguimiento</a></div>
+    <button class="cartbtn" id="openCart" aria-label="Abrir tu solicitud">Mi pedido<b id="count">0</b></button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Distribuciones MB</p>
+    <h1>Del catálogo a la entrega.</h1>
+    <p class="lead">Consulta productos, envía tu solicitud y sigue cada avance con un mismo folio.</p>
+    <div class="cta">
+      <a class="btn" href="catalogo.html">Explorar catálogo</a>
+      <a class="link" href="#seguimiento">Ya tengo un folio ›</a>
+    </div>
+  </div>
+  <div class="stage rv">
+    <div class="phone"><img src="img/seguimiento-movil.jpg" width="941" height="1672" alt="Pantalla de seguimiento del pedido MB-2408: recibido, aceptado, en preparación y entrega" fetchpriority="high"></div>
+  </div>
+</header>
+
+<section id="como">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Un pedido, una referencia</p>
+      <h2>Sin perder nada entre mensajes.</h2>
+      <p class="lead">El folio acompaña tu compra desde la solicitud hasta la entrega.</p>
+    </div>
+    <div class="bento">
+      <div class="card gray rv"><div><span class="n">01</span><h3>Revisión antes de aceptar</h3><p>Verificamos cantidades antes de confirmar tu pedido. Si algo cambia, lo acordamos contigo primero.</p></div></div>
+      <div class="card dark rv"><div><span class="n">02</span><h3>Preparación con responsable</h3><p>Tu lista aceptada tiene una persona a cargo y un registro de cada avance.</p></div></div>
+      <div class="card gray rv"><div><span class="n">03</span><h3>Seguimiento hasta la entrega</h3><p>Consulta el estado y la última actualización con tu folio, o escríbenos por WhatsApp.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0 0 110px">
+  <div class="wrap">
+    <a class="showcase rv" href="catalogo.html" aria-label="Todo para tu hogar. Ver el catálogo de Distribuciones MB">
+      <img src="img/hogar.jpg" width="1536" height="1024" loading="lazy" alt="Todo para tu hogar: ollas, sartén, licuadora, termo y vajilla junto a una caja y una bolsa con el logo de Distribuciones MB">
+    </a>
+    <div class="cta"><a class="btn" href="catalogo.html">Ver el catálogo</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap band">
+    <div class="photo rv" role="img" aria-label="Entrega de una caja con etiqueta de folio" style="background-image:url(img/entrega-folio.png)"></div>
+    <div class="rv">
+      <p class="eyebrow">Entrega</p>
+      <h2>Tu pedido sale con su folio.</h2>
+      <p class="lead">Domicilio o recoger en tienda: el cierre queda registrado con la misma referencia. Sin prometer horas que no acordamos contigo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gray" id="solicitud">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Solicitud de pedido</p>
+      <h2>Organiza lo que necesitas.</h2>
+      <p class="lead">Revisaremos cantidades y disponibilidad antes de aceptar.</p>
+    </div>
+    <form class="panel rv" id="form" novalidate>
+      <div id="formView">
+        <div class="lines" id="lines"></div>
+        <label for="nombre">Nombre o negocio</label>
+        <input class="field" id="nombre" autocomplete="organization" placeholder="Ej. Cocina Doña Rosa">
+        <label for="tel">Teléfono de contacto</label>
+        <input class="field" id="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="33 0000 0000">
+        <label>Modalidad</label>
+        <div class="seg">
+          <label><input type="radio" name="mod" value="Domicilio" checked><span><b>Domicilio</b><em>Acordamos zona y horario</em></span></label>
+          <label><input type="radio" name="mod" value="Recoger en tienda"><span><b>Recoger en tienda</b><em>Te avisamos cuando esté listo</em></span></label>
+        </div>
+        <label for="nota">Nota para revisar (opcional)</label>
+        <textarea class="field" id="nota" rows="2" placeholder="Cantidad, presentación o preferencia"></textarea>
+        <label class="chk"><input type="checkbox" id="priv"><span>He leído el <a href="legal.html#privacidad">Aviso de privacidad</a> y los <a href="legal.html#terminos">Términos y condiciones</a>.</span></label>
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn submit" type="submit">Enviar solicitud</button>
+        <p class="fine">No procesa pagos ni conecta inventario en tiempo real.</p>
+      </div>
+      <div class="done hide" id="doneView">
+        <div class="ok">✓</div>
+        <p class="eyebrow">Solicitud recibida</p>
+        <div class="folio" id="newFolio"></div>
+        <p>Conserva este folio para consultar avances y aclarar cualquier ajuste.</p>
+        <ul class="dlines" id="doneLines"></ul>
+        <p class="next">Siguiente paso: revisamos cantidades y disponibilidad y te contactamos por teléfono o WhatsApp.</p>
+        <div class="cta">
+          <a class="btn" id="goTrack" href="#seguimiento">Consultar seguimiento</a>
+          <a class="link" id="wa" target="_blank" rel="noopener">Avisar por WhatsApp ›</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="seguimiento">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Seguimiento privado</p>
+      <h2>Consulta tu pedido con el folio.</h2>
+      <p class="lead">Escribe tu número de referencia para ver el estado y la última actualización.</p>
+    </div>
+    <div class="panel rv">
+      <form class="lookup" id="lookup">
+        <input class="field" id="folioIn" placeholder="MB-2408" aria-label="Folio" autocomplete="off">
+        <button class="btn" type="submit">Consultar</button>
+      </form>
+      <p class="err" id="lerr" role="alert"></p>
+      <div class="result hide" id="result"></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <img class="truck" src="img/entrega.svg" alt="Camioneta de reparto de Distribuciones MB" loading="lazy">
+    <p class="eyebrow" style="color:#c7d6cd">¿Prefieres hablar con alguien?</p>
+    <h2>Ventas está a un mensaje.</h2>
+    <p class="lead">Escríbenos por WhatsApp con tu folio y te ayudamos.</p>
+    <div class="cta"><a class="btn" id="waGeneral" target="_blank" rel="noopener">Abrir WhatsApp</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <nav class="flinks" aria-label="Legal"><a href="legal.html#terminos">Términos y condiciones</a><a href="legal.html#privacidad">Aviso de privacidad</a><a href="legal.html#cookies">Cookies</a><a href="legal.html#aviso">Aviso legal</a></nav>
+    <div class="fbot"><span>© 2026 Distribuciones MB. Todos los derechos reservados.</span><span>Los precios y la disponibilidad son de referencia y se confirman al revisar tu solicitud.</span></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Tu pedido" aria-hidden="true">
+  <header><div><h3>Tu pedido</h3><small id="drawerCount"></small></div><button class="x" id="closeCart" aria-label="Cerrar">✕</button></header>
+  <div class="body" id="drawerBody"></div>
+  <div id="drawerFoot"></div>
+  <a class="btn" href="#solicitud" id="toForm">Continuar con la solicitud</a>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>

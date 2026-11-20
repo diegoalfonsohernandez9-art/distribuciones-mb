@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Producto — Distribuciones MB</title>
+<meta name="description" content="Consulta productos, envía tu solicitud y sigue cada avance con un mismo folio.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Distribuciones MB, inicio"><img class="lg-i" src="img/logo-icono.png" width="35" height="30" alt=""><img class="lg-n" src="img/logo-nombre.png" width="157" height="22" alt="Distribuciones MB"></a>
+    <div class="links"><a href="index.html#como">Cómo funciona</a><a href="catalogo.html" style="color:var(--ink)">Catálogo</a><a href="index.html#solicitud">Solicitud</a><a href="index.html#seguimiento">Seguimiento</a></div>
+    <button class="cartbtn" id="openCart" aria-label="Abrir tu solicitud">Mi pedido<b id="count">0</b></button>
+  </div>
+</nav>
+
+<section style="padding:48px 0 90px">
+  <div class="wrap">
+    <div id="detail"></div>
+    <div class="related">
+      <h2>Más de esta categoría</h2>
+      <div class="grid" id="grid"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <nav class="flinks" aria-label="Legal"><a href="legal.html#terminos">Términos y condiciones</a><a href="legal.html#privacidad">Aviso de privacidad</a><a href="legal.html#cookies">Cookies</a><a href="legal.html#aviso">Aviso legal</a></nav>
+    <div class="fbot"><span>© 2026 Distribuciones MB. Todos los derechos reservados.</span><span>Los precios y la disponibilidad son de referencia y se confirman al revisar tu solicitud.</span></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Tu pedido" aria-hidden="true">
+  <header><div><h3>Tu pedido</h3><small id="drawerCount"></small></div><button class="x" id="closeCart" aria-label="Cerrar">✕</button></header>
+  <div class="body" id="drawerBody"></div>
+  <div id="drawerFoot"></div>
+  <a class="btn" href="index.html#solicitud" id="toForm">Continuar con la solicitud</a>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"cleanUrls":false,"directoryListing":false,"rewrites":[{"source":"/","destination":"/index.html"},{"source":"/producto","destination":"/producto.html"},{"source":"/catalogo","destination":"/catalogo.html"},{"source":"/legal","destination":"/legal.html"}]}
